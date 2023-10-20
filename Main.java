@@ -18,8 +18,10 @@ public class Main {
     public static void main(String[] args){
         Car[] billsUsedCars = new Car[16];
         for (int i = 0; i < billsUsedCars.length ; i++) {
-            billsUsedCars[i] = new Car((int)(100*Math.random() * 100));
+            billsUsedCars[i] = new Car((int)(100*Math.random()));
         }
+        Fleet billsCarsFleet = new Fleet(billsUsedCars);
+        p(billsCarsFleet.findMax());
 
 
     }
